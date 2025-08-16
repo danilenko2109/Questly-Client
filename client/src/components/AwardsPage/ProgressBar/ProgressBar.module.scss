@@ -1,0 +1,46 @@
+@import '../../../styles/variables';
+
+.circularProgress {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.progressSvg {
+  transform: rotate(-90deg);
+}
+
+.progressBg {
+  fill: none;
+  stroke: $gray-200;
+  stroke-width: 8;
+}
+
+.progressFill {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease-out;
+}
+
+.progressText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.percent {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $text;
+}
+
+.values {
+  display: block;
+  font-size: 0.8rem;
+  color: $text-light;
+}

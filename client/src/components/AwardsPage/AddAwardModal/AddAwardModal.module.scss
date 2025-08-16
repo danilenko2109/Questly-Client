@@ -1,0 +1,80 @@
+@import '../../../styles/variables';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  @include fade-in();
+}
+
+.modal {
+  background: $white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: $shadow-lg;
+  overflow: hidden;
+}
+
+.header {
+  padding: 1.5rem;
+  background: $primary;
+  color: $white;
+
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+}
+
+.form {
+  padding: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: $text;
+    font-weight: 500;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid $gray-200;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+
+    &:focus {
+      outline: none;
+      border-color: $primary;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-top: 1px solid $gray-200;
+}
+
+.cancelButton {
+  @include button($gray-200, $text);
+}
+
+.submitButton {
+  @include button($primary);
+}

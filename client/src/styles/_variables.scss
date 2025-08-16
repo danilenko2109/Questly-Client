@@ -1,0 +1,64 @@
+// Цвета
+$primary: #4361EE;;
+$primary-dark: #3f37c9;
+$error: red;
+$success: #3f37c9;
+$text: #212529;
+$text-light: #6c757d;
+$bg: #f8f9fa;
+$white: #ffffff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-500: #adb5bd;
+
+// Тени
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+// Анимации
+@mixin fade-in($duration: 0.3s) {
+  animation: fadeIn $duration ease-out;
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+// Кнопки
+@mixin button($bg-color, $text-color: $white) {
+  padding: 0.75rem 1.5rem;
+  background: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 500;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+
+// Цвета
+$primary-color: #4361ee;
+$primary-hover: #3a56d4;
+$secondary-color: #e9ecef;
+$secondary-hover: #dee2e6;
+$danger-color: #f72585;
+$danger-hover: #e5177b;
+$success-color: #4cc9f0;
+$success-hover: #3ab7dd;
+
+// Размеры
+$button-padding: 0.75rem 1.5rem;
+$button-padding-small: 0.5rem 1rem;
+$button-radius: 8px;
+
+// Тени
+$shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+$shadow-md: 0 4px 6px rgba(0,0,0,0.1);

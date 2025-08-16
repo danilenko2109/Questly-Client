@@ -1,0 +1,107 @@
+.bottom-navbar {
+  --nav-height: 70px;
+  --nav-padding: 0 20px;
+  --nav-icon-size: 24px;
+  --nav-text-size: 12px;
+  --nav-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --nav-blur: blur(10px);
+  --nav-border: 1px solid var(--divider-color);
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: var(--nav-height);
+  padding: var(--nav-padding);
+  background-color: rgba(var(--bg-color), 0.8);
+  backdrop-filter: var(--nav-blur);
+  -webkit-backdrop-filter: var(--nav-blur); // Для Safari
+  border-top: var(--nav-border);
+  z-index: 1000;
+  transition: var(--nav-transition);
+
+  @media (min-width: 768px) {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 8px;
+    border-radius: 20px;
+    border: var(--nav-border);
+    box-shadow: 0 4px 20px var(--shadow-color);
+    background-color: rgba(var(--bg-alt), 0.8);
+    right: auto;
+    bottom: auto;
+  }
+
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--inactive-color);
+    padding: 8px 12px;
+    border-radius: 12px;
+    transition: var(--nav-transition);
+    position: relative;
+
+    &:hover {
+      color: var(--primary-color);
+      background-color: rgba(var(--primary-color), 0.1);
+    }
+
+    &.active {
+      color: var(--active-color);
+      background-color: rgba(var(--primary-color), 0.1);
+
+      .nav-icon {
+        transform: scale(1.1);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: var(--active-color);
+
+        @media (min-width: 768px) {
+          bottom: 50%;
+          left: -5px;
+          transform: translateY(50%);
+        }
+      }
+    }
+  }
+
+  .nav-icon {
+    font-size: var(--nav-icon-size);
+    transition: var(--nav-transition);
+    margin-bottom: 4px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .nav-text {
+    font-size: var(--nav-text-size);
+    font-weight: 500;
+    transition: var(--nav-transition);
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}
