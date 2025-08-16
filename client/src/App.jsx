@@ -27,18 +27,18 @@ function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Routes>
-            <Route path="/" element={<LoginPage />} />
+            <Route path="Questly-Client/" element={<LoginPage />} />
             <Route
-              path="/home"
+              path="Questly-Client/home"
               element={isAuth ? <HomePage /> : <Navigate to="/" />}
             />
             <Route
-              path="/profile/:userId"
+              path="Questly-Client/profile/:userId"
               element={isAuth ? <ProfilePage /> : <Navigate to="/" />}
             />
 
-            <Route path="/search" element={<SearchPage />} />
-<Route path="/challenges" element={<ChallengesPage />} />
+            <Route path="Questly-Client/search" element={<SearchPage />} />
+<Route path="Questly-Client/challenges" element={<ChallengesPage />} />
         
           </Routes>
             
