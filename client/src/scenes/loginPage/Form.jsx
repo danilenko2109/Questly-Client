@@ -93,7 +93,7 @@ const Form = () => {
           token: loggedIn.token,
         })
       );
-      navigate("Questly-Client/home");
+      navigate("/home");
     }
   };
 

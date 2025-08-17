@@ -4,24 +4,11 @@ import AddAwardModal from '../../components/AddAwardModal';
 import styles from './ChallengesPage.module.scss';
 
 export default function ChallengesPage() {
-  const [user, setUser] = useState(null);
   const [userChallenges, setUserChallenges] = useState([]);
   const [recommendedChallenges, setRecommendedChallenges] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('my-challenges');
-
-  useEffect(() => {
-    const mockUser = { 
-      id: 'user1', 
-      name: 'Demo User',
-      streak: 7,
-      level: 3,
-      points: 450
-    };
-    setUser(mockUser);
-  }, []);
 
   useEffect(() => {
     const mockUserChallenges = [
@@ -120,7 +107,6 @@ export default function ChallengesPage() {
   };
 
   if (loading) return <div className={styles.loading}>Loading...</div>;
-  if (error) return <div className={styles.error}>Error: {error}</div>;
 
   return (
     <div className={styles.container}>

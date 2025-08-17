@@ -20,7 +20,6 @@ import {
   DialogContentText,
   DialogTitle,
   Button,
-  Avatar,
   Menu,
   MenuItem,
   ListItemIcon,

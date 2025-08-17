@@ -5,8 +5,6 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { 
   FiSun, 
   FiMoon,
-  FiMessageSquare,
-  FiBell,
   FiLogOut,
   FiSettings,
   FiHelpCircle
@@ -56,10 +54,7 @@ const Navbar = () => {
     '--divider-color': palette.divider
   }), [palette, isDark]);
 
-  const navItems = [
-    { path: '/home', icon: <FiMessageSquare size={20} />, label: 'Feed' },
-    { path: '/notifications', icon: <FiBell size={20} />, label: 'Notifications' }
-  ];
+
 
   return (
     <nav className="navbar" style={themeStyles}>
