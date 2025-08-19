@@ -66,7 +66,7 @@ const PostWidget = ({
   const error = palette.error.main;
 
   const patchLike = async () => {
-    const response = await fetch(`http://localhost:3001/posts/${postId}/like`, {
+    const response = await fetch(`https://questly-server-5.onrender.com/posts/${postId}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -83,7 +83,7 @@ const PostWidget = ({
 
     try {
       const response = await fetch(
-        `http://localhost:3001/posts/${postId}/comment`,
+        `https://questly-server-5.onrender.com/posts/${postId}/comment`,
         {
           method: "PATCH",
           headers: {
@@ -108,7 +108,7 @@ const PostWidget = ({
   const handleDeleteComment = async (commentId) => {
     try {
       const response = await fetch(
-        `http://localhost:3001/posts/${postId}/comments/${commentId}`,
+        `https://questly-server-5.onrender.com/posts/${postId}/comments/${commentId}`,
         {
           method: "DELETE",
           headers: {
@@ -142,7 +142,7 @@ const PostWidget = ({
   const handleDeleteConfirm = async () => {
     setIsDeleting(true);
     try {
-      const response = await fetch(`http://localhost:3001/posts/${postId}`, {
+      const response = await fetch(`https://questly-server-5.onrender.com/posts/${postId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

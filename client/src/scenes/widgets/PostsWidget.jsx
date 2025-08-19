@@ -19,8 +19,8 @@ const PostsWidget = ({ userId, isProfile = false }) => {
       setIsLoading(true);
       try {
         const base = isProfile
-          ? `http://localhost:3001/posts/${userId}/posts`
-          : `http://localhost:3001/posts`;
+          ? `https://questly-server-5.onrender.com/posts/${userId}/posts`
+          : `https://questly-server-5.onrender.com/posts`;
         const url = new URL(base);
         url.searchParams.set("page", String(pageToLoad));
         url.searchParams.set("limit", String(limit));

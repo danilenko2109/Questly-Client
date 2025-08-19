@@ -43,7 +43,7 @@ const SearchPage = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:3001/users/search/users?query=${encodeURIComponent(query)}`,
+        `https://questly-server-5.onrender.com/users/search/users?query=${encodeURIComponent(query)}`,
         {
           method: "GET",
           headers: { Authorization: `Bearer ${token}` },

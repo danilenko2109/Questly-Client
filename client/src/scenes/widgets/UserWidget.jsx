@@ -39,7 +39,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
   const getUser = useCallback(async () => {
     try {
-      const response = await fetch(`http://localhost:3001/users/${userId}`, {
+      const response = await fetch(`https://questly-server-5.onrender.com/users/${userId}`, {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -109,7 +109,7 @@ const UserWidget = ({ userId, picturePath }) => {
         formDataToSend.append("picturePath", formData.picturePath);
       }
 
-      const response = await fetch(`http://localhost:3001/users/${userId}`, {
+      const response = await fetch(`https://questly-server-5.onrender.com/users/${userId}`, {
         method: "PATCH",
         headers: {
           Authorization: `Bearer ${token}`,
